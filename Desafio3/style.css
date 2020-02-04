@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro&display=swap');
-  
+
   *{
     margin : 0;
     padding: 0;
@@ -100,6 +100,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   padding: 20px;
+  text-align: center;
 }
 
 .card {
@@ -108,11 +109,12 @@
 }
 
 .card__image-container img  {
-  width: 435px;
+  width: 385px;
   height: 207px;
   position: relative;
   top: 150px;
   padding-bottom: 30px;
+  
 }
 
 .card__content,
@@ -141,56 +143,71 @@
   color: #01d361;
 }
 
+#launchbase:hover{
+  border: 2px solid rgba(223, 91, 3, 0.822);
+  transition: color 1000ms;
+ }
+ 
+ #starter:hover{
+  border: 2px solid  #7159c1;
+  transition: color 1000ms;
+ }
+ 
+ #gostack:hover{
+  border: 2px  solid #06b43b;
+  transition: color 1000ms;
+ }
+
 
 /*=== MODAL ===*/
 
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+.modal_overlay{
+  background-color: black;
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 0;
-  opacity: 0;
+  top:0;
+  opacity: 0%;
   visibility: hidden;
 }
-
-.modal {
+.modal{
   background-color: white;
-  border-radius: 20px;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   margin: 5vh auto;
   position: relative;
+  border-radius: 10px;
 }
 
-.modal .close-modal {
+.close_modal{
   color: black;
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 0px;
+  top: 5px;
   cursor: pointer;
 }
 
-.modal .maximize-modal {
+.maximize_modal{
   color: black;
   position: absolute;
-  right: 30px;
-  top: 8px;
+  top: 5px;
+  right: 20px;
   cursor: pointer;
 }
 
-/* === MODAL.ACTIVE ===*/
-
-.modal-overlay.active {
+.modal_overlay.active{
   opacity: 1;
   visibility: visible;
 }
+.modal.fullscreen{
+ width: 100%;
+ height: 100%;
+ margin: 0;
+}
 
-
-
-iframe {
-  width: 100%;
-  height: 90%;
-  position: absolute;
-  top: 6%;
+iframe{
+ height: 95%;
+ width: 100%;
+ top: 30px;
+ position: absolute;
 }
